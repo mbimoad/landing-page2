@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=IBM+Plex+Mono:wght@300&family=Passion+One&family=Permanent+Marker&family=Signika:wght@300&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Urbanist:ital,wght@0,100;1,200&display=swap');
+/* Positioning */
+.relative {
+    position: relative;
+} .absolute {
+    position: absolute;
+}
+
+:root {
+    --backgrond: #ffffff;
+    --button: #455D7A; 
+    --teks: #4AB8B8;
+    --background1: #D3E7E6;
+    --background2: #90CED0;
+} * {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+} body {
+    background: var(--backgrond);
+    height: 100vh;
+    overflow: hidden;
+
+} .btn-primary {
+    background-color: var(--button);
+    border: unset;
+} .btn-primary:hover {
+    
+} a {
+    font-family: calibri;
+} .nav-link {
+    font-weight: bold;
+    color:var(--button);
+} .nav-item:last-child .nav-link {
+    color:white;
+} .nav-item {
+    margin-left: 30px;
+}
+
+.navbar-brand {
+    font-family: 'Permanent Marker', cursive;
+    color:var(--button);
+} p {
+    font-family: 'Be Vietnam Pro', sans-serif;
+} h2 {
+    font-family: 'Acme', sans-serif;
+} h3 {
+    font-family: 'IBM Plex Mono', monospace;
+} .hero-title {
+    font-family: 'Acme', sans-serif;
+    color:var(--teks);
+}
+
+/* Header */
+.menu {
+    display: flex;
+    justify-content: end;
+} .navbar-nav {
+    margin-right: 50px;
+} 
+
+/* Hero */
+.heroimg {
+    width: 100%;
+} .hero {
+    height: 100vh;
+} .hero h1 {
+    font-weight: bold;
+} .hero-detail {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:start;
+} .hero-detail p {
+    font-weight: unset;
+}
+
+/* Component */
+.mycomponent {
+    width: 40px;
+}
+
+.hero .c1 {
+    bottom: -20px;
+    left: 150px;
+} .hero .c2 {
+    right: 0;
+    top: 100px;
+} .hero .c3 {
+    left: 180px;
+    top: 20px;
+} .hero .c4 {
+    bottom: -80px;   
+    right:150px;
+} .c5 {
+    top: 60px;
+    left: 500px;
+}
+
+.hilang {
+    opacity: 0;
+    transform: translate(0, -300px);
+    transition: all 500ms ease 0s;
+} .hilang.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* About Us */
+.vector {
+    width: 70%;
+} .aboutus {
+    background-color: var(--backgrond2);
+} .vector:first-child {
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Main-Features */
+.main-features {
+    background-image: linear-gradient(to bottom, var(--backgrond), white 90%);
+} .main-features .card {
+    background-color: var(--backgrond3);
+    box-shadow: 3px 3px 5px #999;
+    border: 15px double gray;
+    width: 18rem; margin:auto;
+} .card-title {
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 50%;
+    color:gray;
+} .card-subtitle {
+    color:gray;
+    font-weight:bold;
+} 
+.main-features .card1,
+.main-features .card3 {
+    background-color: white;
+} 
+
+/* Contact */
+.contactus {
+    height:200px;
+    background-image: url('contact.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+} .contactus:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.726);
+} .overlay {
+    position: relative;
+    z-index: 9;
+    margin-top: 20px;
+}
+
+.mycontact {
+    border: 5px double var(--backgrond3);
+    color:white;
+    padding:5px;
+} 
+
+/* Footer */
+footer {
+    background-color: rgb(39, 39, 39);
+}
+.icon {
+    font-size: 20px;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    color:white;
+} .icon:first-child {
+    background-color: blue;
+} .icon:nth-child(2) {
+    background-color: rgb(255, 6, 110);
+} .icon:nth-child(3) {
+    background-color: rgb(216, 79, 0);
+} .icon:last-child {
+    background-color: rgb(7, 137, 243);
+}  .footer-menu ul {
+    list-style-type: none   ;
+} .footer-menu ul li a {
+    color:white; 
+    text-decoration:none;
+    font-size: 14px;
+} .sosmed {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    color: white;
+
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-image: linear-gradient(to bottom, var(--teks) 250px, var(--backgrond) 250px);
+    }
+    .navbar-nav {
+        margin: unset;
+        width: 100%;
+        text-align: center;
+    } .vector:first-child {
+        width: 100vw;
+    } .nav-item {
+        margin-left: unset;
+    } .bg {
+        display: none;
+    } .orders {
+        display: flex;
+        text-align: center;
+    }
+    .hero-detail {
+        order: 3;
+        align-items: center;
+        justify-content: center;
+    } .hero-detail2 {
+        order: 2;
+    }
+}
